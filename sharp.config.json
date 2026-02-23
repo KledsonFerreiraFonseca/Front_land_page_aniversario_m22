@@ -1,5 +1,13 @@
 {
     "png": {
-        "quality": 75
+        "compressionLevel": 9,
+        "palette": true,
+        "adaptiveFiltering": true,
+        "effort": 7
+    },
+    "webp": {
+        "quality": 75,
+        "effort": 6,
+        "smartSubsample": true
     }
 }

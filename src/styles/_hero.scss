@@ -1,0 +1,33 @@
+.hero{
+    background-image: url(../images/imagem_fundo.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    border-bottom: solid 4px rgba(238, 255, 0, 0.479);
+        
+    &__foto1{
+        margin: 20px 20px 20px 80px;
+        border: solid 4px rgba(238, 255, 0, 0.479);
+        height: 200px;
+    }
+
+    &__text{
+        color: #fff;
+        font-size: 25px;
+        font-family: "Lobster Two", sans-serif;
+        font-weight: 400;
+        font-style: italic;
+        padding-left: 25px;
+
+        &__mensagem{
+            font-size: large;
+            font-size: 50px;
+        }
+
+        &__data{
+            font-family: sans-serif;
+            font-size: 15px;
+            padding-top: 20px;
+        }
+    }
+}
