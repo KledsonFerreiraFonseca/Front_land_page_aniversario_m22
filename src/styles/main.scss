@@ -1,18 +1,32 @@
+@use 'contador';
+@use 'galeriafotos';
+@use 'localizacao';
+@use 'rsvp';
+@use 'sobre';
 @use 'hero';
 
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Lobster Two", sans-serif;
-    
 }
 
-.container{
+ul,
+ol {
+    list-style: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+.container {
     max-width: 960px;
     width: 100%;
     margin: 0 auto;
+    padding: 0 16px;
     display: flex;
     align-items: center;
-    
+    font-family: "Lobster Two", sans-serif;
 }

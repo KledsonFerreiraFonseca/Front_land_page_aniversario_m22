@@ -1,33 +1,153 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aniversário</title>
+    <title>Aniversário — 49 Anos</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles/main.scss">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:wght@400;700;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles/main.scss"><!-- Link para o arquivo SCSS principal -->
 </head>
 
 <body>
-    <header class="hero">
+    <!--HERO-->
+    <header class="hero" id="hero">
+        <nav class="hero__nav" aria-label="Menu principal">
+            <ul class="hero__nav-list">
+                <li><a class="hero__nav-link" href="#hero">Início</a></li>
+                <li><a class="hero__nav-link" href="#sobre">Sobre</a></li>
+                <li><a class="hero__nav-link" href="#galeria">Galeria de Fotos</a></li>
+                <li><a class="hero__nav-link" href="#rsvp">RSVP</a></li>
+                <li><a class="hero__nav-link" href="#local">Local</a></li>
+            </ul>
+        </nav>
         <div class="container">
-            <img class="hero__foto1" src="./images/3x4.webp" alt="">
-            <div class="hero__text">
-                <P class="hero__text__principal">
-                    Você é nosso convidado especial!
-                </p>
-                <p class="hero__text__mensagem">
-                    <strong>49 Anos de Alegria!</strong>
-                </P>
-                <p class="hero__text__data">
-                    18 de Fevereiro de 2027 | Centro de Eventos Petry
+            <img class="hero__foto" src="./images/3x4.webp" alt="Foto do aniversariante">
+            <div class="hero__content">
+                <p class="hero__convite">Você é nosso convidado especial!</p>
+                <h1 class="hero__titulo">49 Anos de Alegria!</h1>
+                <p class="hero__data">
+                    <time datetime="2027-02-18">18 de Fevereiro de 2027</time>
+                    &nbsp;|&nbsp; Centro de Eventos Petry
                 </p>
             </div>
         </div>
     </header>
+
+    <!--CONTADOR-->
+    <section class="contador" aria-label="Contagem regressiva para o evento">
+        <div class="contador__relogios" id="temp">
+            <div class="contador__item contador__item--destaque">
+                <span class="contador__numero" id="dias">00</span>
+                <span class="contador__label">DIAS</span>
+            </div>
+            <div class="contador__item">
+                <span class="contador__numero" id="horas">00</span>
+                <span class="contador__label">HORAS</span>
+            </div>
+            <div class="contador__item">
+                <span class="contador__numero" id="minutos">00</span>
+                <span class="contador__label">MINUTOS</span>
+            </div>
+            <div class="contador__item">
+                <span class="contador__numero" id="segundos">00</span>
+                <span class="contador__label">SEGUNDOS</span>
+            </div>
+        </div>
+    </section>
+
+    <!--SOBRE-->
+    <section class="sobre" id="sobre" aria-labelledby="sobre-titulo">
+        <div class="container">
+            <h2 class="sobre__titulo" id="sobre-titulo">Sobre o Aniversário</h2>
+            <p class="sobre__texto">
+                Venho convidar a todos para uma celebração especial que marca mais um ano de vida
+                repleto de alegria, conquistas e momentos memoráveis. É uma ocasião para reunir
+                amigos e familiares para comemorar a minha jornada, refletir sobre as experiências
+                passadas e criar novas memórias juntos. Este evento é uma oportunidade para expressar
+                amor, gratidão e carinho por todos presentes, celebrando sua presença única em minha vida.
+            </p>
+        </div>
+    </section>
+
+    <!--GALERIA-->
+    <section class="galeria" id="galeria" aria-labelledby="galeria-titulo">
+        <div class="container">
+            <h2 class="galeria__titulo" id="galeria-titulo">Galeria de Fotos</h2>
+            <ul class="galeria__grid" role="list">
+                <li class="galeria__card">
+                    <span class="galeria__foto-titulo">Com os filhos</span>
+                    <img class="galeria__imagem" src="./images/filhos.webp" alt="Com os filhos">
+                </li>
+                <li class="galeria__card">
+                    <span class="galeria__foto-titulo">Época de estudante</span>
+                    <img class="galeria__imagem" src="./images/estudante.png" alt="Época de estudante">
+                </li>
+                <li class="galeria__card">
+                    <span class="galeria__foto-titulo">Com os pais</span>
+                    <img class="galeria__imagem" src="./images/pais.png" alt="Com os pais">
+                </li>
+                <li class="galeria__card">
+                    <span class="galeria__foto-titulo">Com os irmãos</span>
+                    <img class="galeria__imagem" src="./images/irmãos.png" alt="Com os irmãos">
+                </li>
+                <li class="galeria__card">
+                    <span class="galeria__foto-titulo">Correndo</span>
+                    <img class="galeria__imagem" src="./images/correndo.webp" alt="Correndo">
+                </li>
+                <li class="galeria__card">
+                    <span class="galeria__foto-titulo">Tocando violão</span>
+                    <img class="galeria__imagem" src="./images/tocando_violão.png" alt="Tocando violão">
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <!--RSVP-->
+    <section class="rsvp" id="rsvp" aria-labelledby="rsvp-titulo">
+        <div class="container">
+            <h2 class="rsvp__titulo" id="rsvp-titulo">Confirme sua Presença</h2>
+            <form class="rsvp__form" action="#" novalidate>
+                <div class="rsvp__grupo">
+                    <label class="rsvp__label" for="nome">Nome completo</label>
+                    <input class="rsvp__input" id="nome" type="text" placeholder="Digite seu nome completo"
+                        autocomplete="name" required>
+                </div>
+                <div class="rsvp__grupo">
+                    <label class="rsvp__label" for="acompanhantes">Acompanhantes</label>
+                    <select class="rsvp__select" id="acompanhantes" required>
+                        <option value="" disabled selected>Quantos acompanhantes?</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5+">5 ou mais</option>
+                    </select>
+                </div>
+                <button class="rsvp__botao" type="submit">Confirmar Presença</button>
+            </form>
+        </div>
+    </section>
+
+    <!--LOCALIZAÇÃO-->
+    <section class="localizacao" id="local" aria-labelledby="local-titulo">
+        <div class="container">
+            <h2 class="localizacao__titulo" id="local-titulo">Localização</h2>
+            <address class="localizacao__endereco">
+                Centro de Eventos Petry — Rua dos Aniversariantes, nº 123, Biguaçú
+            </address>
+            <p class="localizacao__texto">
+                O local é de fácil acesso e oferece estacionamento gratuito para os convidados.
+                Venha celebrar conosco em um ambiente acolhedor e festivo!
+            </p>
+            <img class="localizacao__mapa" src="./images/maps.png"
+                alt="Mapa com a localização do Centro de Eventos Petry">
+        </div>
+    </section>
+    <script src="scripts/main.js"></script><!-- Link para o arquivo JavaScript -->
 </body>
 
 </html>

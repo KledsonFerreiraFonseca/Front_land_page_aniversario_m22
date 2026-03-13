@@ -1,0 +1,65 @@
+.contador {
+    padding: 16px;
+    background-color: beige;
+
+    &__relogios {
+        display: flex;
+        justify-content: center;
+        align-items: stretch;
+        flex-wrap: wrap;//quebra linha em telas pequenas
+        gap: 6px;//gap menor no mobile
+
+        @media (min-width: 768px) {
+            gap: 8px;
+            flex-wrap: nowrap;//mantém em linha no tablet+
+        }
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #fff;
+        border: 2px solid beige;
+        border-radius: 8px;
+        padding: 6px;//padding menor no mobile
+        min-width: 60px;//menor no mobile
+
+        @media (min-width: 768px) {
+            padding: 8px;
+            min-width: 80px;
+        }
+
+        //Modificador: item em destaque (dias)
+        &--destaque {
+            background-color: rgb(226, 187, 57);
+        }
+    }
+
+    &__numero {
+        font-size: 1.4rem;//menor no mobile
+        font-weight: 700;
+
+        @media (min-width: 768px) {
+            font-size: 1.8rem;
+        }
+
+        @media (min-width: 1024px) {
+            font-size: 2rem;
+        }
+    }
+
+    &__label {
+        font-size: 0.65rem;//menor no mobile
+        margin-top: 2px;
+        text-transform: uppercase;
+
+        @media (min-width: 768px) {
+            font-size: 0.75rem;
+        }
+
+        @media (min-width: 1024px) {
+            font-size: 0.8rem;
+        }
+    }
+}

@@ -1,0 +1,100 @@
+.rsvp {
+    padding: 24px 16px;
+
+    @media (min-width: 768px) {
+        padding: 32px 24px;
+    }
+
+    @media (min-width: 1024px) {
+        padding: 40px 5px;
+    }
+
+    .container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    &__titulo {
+        font-family: "Lobster Two", sans-serif;
+        font-size: 1.2rem;
+        margin-bottom: 12px;
+
+        @media (min-width: 768px) {
+            font-size: 1.4rem;
+            margin-bottom: 14px;
+        }
+
+        @media (min-width: 1024px) {
+            font-size: 1.5rem;
+            margin-bottom: 16px;
+        }
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        width: 100%;
+        font-family: "Roboto", sans-serif;
+    }
+
+    &__grupo {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        width: 100%;
+    }
+
+    &__label {
+        font-size: 0.9rem;
+        font-weight: 700;
+        color: #333;
+
+        @media (min-width: 1024px) {
+            font-size: 1rem;
+        }
+    }
+
+    &__input,
+    &__select {
+        padding: 10px 12px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 0.95rem;
+        cursor: pointer;
+        width: 100%;
+
+        @media (min-width: 768px) {
+            max-width: 400px;
+            font-size: 1rem;
+        }
+
+        &:focus {
+            outline: 2px solid rgb(153, 119, 7);
+            outline-offset: 2px;
+        }
+    }
+
+    &__botao {
+        margin-top: 8px;
+        padding: 10px 20px;
+        width: 100%;
+        background-color: rgb(153, 119, 7);
+        color: #fff;
+        font-family: "Roboto", sans-serif;
+        font-weight: 700;
+        font-size: 1rem;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.2s ease;
+
+        @media (min-width: 768px) {
+            width: fit-content;
+        }
+
+        &:hover {
+            background-color: rgb(120, 93, 5);
+        }
+    }
+}
